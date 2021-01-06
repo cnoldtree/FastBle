@@ -4,14 +4,12 @@ import java.io.Serializable;
 
 
 public abstract class BleException implements Serializable {
+
     private static final long serialVersionUID = 8004414918500865564L;
 
-    public static final int ERROR_CODE_TIMEOUT = 1;
-    public static final int ERROR_CODE_INITIAL = 101;
-    public static final int ERROR_CODE_GATT = 201;
-    public static final int GATT_CODE_OTHER = 301;
-
-    public static final TimeoutException TIMEOUT_EXCEPTION = new TimeoutException();
+    public static final int ERROR_CODE_TIMEOUT = 100;
+    public static final int ERROR_CODE_GATT = 101;
+    public static final int ERROR_CODE_OTHER = 102;
 
     private int code;
     private String description;
