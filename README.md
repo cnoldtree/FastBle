@@ -14,7 +14,7 @@ Android Bluetooth Low Energy
 - Support configuration timeout for conncet or operation  
 
 
-# Preview
+### Preview
 ![Preview_1](https://github.com/Jasonchenlijian/FastBle/raw/master/preview/new_1.png) 
 ![Preview_2](https://github.com/Jasonchenlijian/FastBle/raw/master/preview/new_2.png) 
 ![Preview_3](https://github.com/Jasonchenlijian/FastBle/raw/master/preview/new_3.png)
@@ -27,22 +27,27 @@ If you want to quickly preview all the functions, you can download APK as a test
  [FastBLE.apk](https://github.com/Jasonchenlijian/FastBle/raw/master/FastBLE.apk) 
 
 
-### Maven
-
-	<dependency>
-       <groupId>com.clj.fastble</groupId>
-       <artifactId>FastBleLib</artifactId>
-       <version>2.3.4</version>
-	   <type>pom</type>
-	</dependency>
-
 ### Gradle
 
-	compile 'com.clj.fastble:FastBleLib:2.3.4'
+- Setp1: Add it in your root build.gradle at the end of repositories
 
+        allprojects {
+            repositories {
+                ...
+                maven { url 'https://jitpack.io' }
+            }
+        }
+
+
+- Step2: Add the dependency
+
+        dependencies {
+            implementation 'com.github.Jasonchenlijian:FastBle:2.4.0'
+        }
+    
 ### Jar
 
-[FastBLE-2.3.4.jar](https://github.com/Jasonchenlijian/FastBle/raw/master/FastBLE-2.3.4.jar) 
+[FastBLE-2.4.0.jar](https://github.com/Jasonchenlijian/FastBle/raw/master/FastBLE-2.4.0.jar)
 
 
 ## Wiki
@@ -53,7 +58,7 @@ If you want to quickly preview all the functions, you can download APK as a test
 
 
 
-# Usage
+## Usage
 
 - #### Init
     
@@ -533,7 +538,7 @@ If you want to quickly preview all the functions, you can download APK as a test
 ## Contact
 If you have problems and ideas to communicate with me, you can contact me in the following ways.
 
-QQ： 1033526540
+WeChat： chenlijian1216
 
 Email： jasonchenlijian@gmail.com
 

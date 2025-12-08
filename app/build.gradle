@@ -1,15 +1,16 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.clj.blesample"
-        minSdkVersion 14
-        targetSdkVersion 27
-        versionCode 233
-        versionName "2.3.3"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.versionControl.versionCode
+        versionName rootProject.ext.versionControl.versonName
     }
     buildTypes {
         release {
@@ -20,8 +21,12 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:27.1.1'
-    compile project(':FastBleLib')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+
+    implementation project(':FastBleLib')
 }
